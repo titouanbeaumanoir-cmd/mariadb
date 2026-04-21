@@ -1,0 +1,15 @@
+Enable Captive Portal      : ✓ coché
+Interface                  : LAN (ou VLAN dédié)
+Maximum concurrent connections : 100
+Idle timeout               : 15 min
+Hard timeout               : selon groupe RADIUS
+Authentication method      : RADIUS Authentication
+
+-- Serveur RADIUS primaire
+Primary RADIUS server      : 192.168.1.10   # IP FreeRADIUS
+Primary RADIUS port        : 1812
+Primary RADIUS shared secret : SharedSecretRADIUS
+
+-- Accounting (optionnel, logs de session)
+Primary RADIUS accounting  : 192.168.1.10
+Primary RADIUS acct port   : 1813
