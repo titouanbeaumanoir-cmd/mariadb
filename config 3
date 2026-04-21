@@ -1,0 +1,10 @@
+-- Restriction horaire pour les employés (lun-ven, 8h-20h)
+INSERT INTO radgroupcheck (groupname, attribute, op, value) VALUES
+('employes', 'Login-Time', ':=', 'Al0800-2000');
+-- Al = All weekdays (Lundi-Vendredi)
+-- Sa = Samedi, Su = Dimanche
+-- Ex: Al|Sa0800-2200 = tous jours sauf dimanche
+
+-- Invités : accès 7j/7, 9h-23h
+INSERT INTO radgroupcheck (groupname, attribute, op, value) VALUES
+('invites', 'Login-Time', ':=', 'Any0900-2300');
