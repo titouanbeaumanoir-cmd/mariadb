@@ -2,12 +2,12 @@
 INSERT INTO radgroupreply (groupname, attribute, op, value) VALUES
 ('employes', 'Session-Timeout',       ':=', '86400'),
 ('employes', 'Idle-Timeout',          ':=', '3600'),
-('employes', 'WISPr-Bandwidth-Max-Up',':=', '10485760'),   -- 10 Mbps up
-('employes', 'WISPr-Bandwidth-Max-Down',':=','20971520');  -- 20 Mbps down
+('employes', 'WISPr-Bandwidth-Max-Up',':=', '10485760'),   
+('employes', 'WISPr-Bandwidth-Max-Down',':=','20971520'); 
 
 -- Groupe Invites : accès limité (2 Mbps, 1h session)
 INSERT INTO radgroupreply (groupname, attribute, op, value) VALUES
 ('invites', 'Session-Timeout',          ':=', '3600'),
 ('invites', 'Idle-Timeout',             ':=', '600'),
-('invites', 'WISPr-Bandwidth-Max-Up',   ':=', '512000'),   -- 0.5 Mbps
-('invites', 'WISPr-Bandwidth-Max-Down', ':=', '2097152');  -- 2 Mbps
+('invites', 'WISPr-Bandwidth-Max-Up',   ':=', '512000'), 
+('invites', 'WISPr-Bandwidth-Max-Down', ':=', '2097152'); 
