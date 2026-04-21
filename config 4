@@ -1,0 +1,13 @@
+client nas-wifi {
+    ipaddr  = 192.168.1.1       # IP du routeur/AP
+    secret  = SharedSecretRADIUS
+    nas_type = other
+    shortname = AP-Principal
+}
+
+client pfSense {
+    ipaddr  = 192.168.1.254
+    secret  = SharedSecretRADIUS
+    nas_type = other
+    shortname = pfSense-Portail
+}
