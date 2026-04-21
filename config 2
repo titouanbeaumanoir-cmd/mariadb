@@ -1,0 +1,12 @@
+-- Ajouter l'utilisateur
+INSERT INTO radcheck (username, attribute, op, value) VALUES
+('jdupont', 'Cleartext-Password', ':=', 'MonMotDePasse!');
+
+-- Affecter au groupe employes
+INSERT INTO radusergroup (username, groupname, priority) VALUES
+('jdupont', 'employes', 1);
+
+-- Utilisateur invité avec durée limitée
+INSERT INTO radcheck (username, attribute, op, value) VALUES
+('invite01', 'Cleartext-Password', ':=', 'Invite2024'),
+('invite01', 'Expiration', ':=', '31 Dec 2024 23:59:59');
